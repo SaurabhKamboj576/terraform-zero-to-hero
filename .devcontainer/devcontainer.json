@@ -1,0 +1,27 @@
+{
+  "name": "Terraform + AWS Dev Container",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+
+  "features": {
+    "ghcr.io/devcontainers/features/terraform:1": {},
+    "ghcr.io/devcontainers/features/aws-cli:1": {},
+    "ghcr.io/devcontainers/features/github-cli:1": {},
+    "ghcr.io/devcontainers/features/azure-cli:1": {},
+    "ghcr.io/devcontainers/features/google-cloud-cli:1": {}
+  },
+
+  "postCreateCommand": "terraform -install-autocomplete && echo '✅ Dev container ready with Terraform + AWS + Azure + GCP'",
+
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "hashicorp.terraform",
+        "amazonwebservices.aws-toolkit-vscode",
+        "ms-azuretools.vscode-azureterraform",
+        "ms-vscode.azurecli",
+        "GoogleCloudTools.cloudcode"
+      ]
+    }
+  }
+}
+
